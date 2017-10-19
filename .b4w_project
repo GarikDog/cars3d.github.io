@@ -1,0 +1,28 @@
+[info]
+author = vg3d.ru
+icon = 
+name = Car
+title = Cars colors
+
+[paths]
+assets_dirs = projects/Car/assets;
+blend_dirs = projects/Car/blender;
+blender_exec = /private/var/folders/d1/1_1v38gs4m374xjr2pvhn3w80000gn/T/AppTranslocation/CCC7B47E-13AA-4768-ABDC-6EE834E2C8E3/d/blender.app/Contents/MacOS/blender
+build_dir = projects/Car/build
+deploy_dir = 
+
+[compile]
+apps = 
+css_ignore = 
+engine_type = copy
+ignore = 
+js_ignore = 
+optimization = simple
+use_physics = True
+
+[deploy]
+assets_path_dest = assets
+assets_path_prefix = assets
+ignore = 
+override = 
+

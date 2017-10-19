@@ -1,0 +1,706 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Ki",
+				"KiaRio"
+			],
+			[
+				"vi",
+				"visibility"
+			],
+			[
+				"per",
+				"percent"
+			],
+			[
+				"ro",
+				"rotcam"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"G",
+				"Gold"
+			],
+			[
+				"gol",
+				"gold"
+			],
+			[
+				"Lo",
+				"load_cb"
+			],
+			[
+				"V",
+				"vg"
+			],
+			[
+				"v",
+				"visible"
+			],
+			[
+				"ge",
+				"getElementById"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html> \n<html> \n<head> \n<title>RPcentrum</title> \n<meta charset=\"utf-8\"> \n<meta property=\"og:title\" content=\"RP 3D Car Paint\" />\n<meta property=\"og:image\" content=\"https://i.ytimg.com/vi/OT9brDPxeTU/hqdefault.jpg\" />\n<link type=\"text/css\" rel=\"stylesheet\" href=\"Car.min.css?v=07072017170229\"> \n<script type=\"text/javascript\" src=\"./b4w.simple.min.js?v=07072017170229\"></script>\n<script src=\"http://code.jquery.com/jquery-1.8.3.js\"></script>\n\n<script src=\"progress-circle.js\"></script>\n\n</head> \n<body> \n\n\n\n<div id=\"container\">\n\t<div id=\"circle\"><div id=\"load\"><img src=\"assets/load.png\" alt=\"Load\" height=\"70\" width=\"70\" ></a></div></div>\n\n\t\n\t\n\n<div id=\"main_canvas_container\" onclick=\"colorPanel.style.left = '100%'; carSelect.style.left = '-150px'; calcPanel.style.top = '100%'; \"></div> \n\n<div id=\"vg\"><a href=\"https://vk.com/share.php?url=http://3dstyling.ru\" target=\"_blank\"><img src=\"assets/logoShareVK.png\" alt=\"Logo\" height=\"70\" width=\"70\"></a><div id=\"rotcamid\" style=\"cursor: pointer;\"><img src=\"assets/rotate.png\" alt=\"Logo\" height=\"70\" width=\"70\"></a>\n</div></div>\n\n\n<!-- Начало \n\n    <div id=\"vk_button\" class=\"control_panel_button\" style=\"margin-bottom: 0px; display: block; opacity: 1;\"><a target=\"_blank\" href=\"https://vk.com/share.php?url=http://rpbaza.ru/carpaint/Test1/Col2.html\"></a></div>\n    \n  \n   Конец -->\n\n<div id=\"full\">fullscreen</div>\n\n<div id=\"logo\"><a href=\"http://www.rpcentrum.com\" target=\"_blank\"> <img src=\"assets/logo.png\" alt=\"Logo\" height=\"70\" width=\"70\" ></a></div>\n\n<div id=\"ColorID\"></div>\n\n<did id=\"calcPanel\">Blend4Web-powered.<br>\n<a href=\"http://rpcentrum.com/sotrudnichestvo/\" target=\"_blank\">КУПИТЬ</a> |\n<a href=\"http://www.rpbaza.ru\" target=\"_blank\">ПОКРАСИТЬ</a>\n\n</did>\n<!-- HERE CODE of car list -->\n    <div id=\"carSelect\" onclick=\"this.style.left = '0px'\">\n      <div id=\"carButton\"> C A R S </div>\n          <div class=\"carTab\">\n        <div id=\"AUDIA4\" onclick=\"location.href='A4.html'\" style=\"background-color: rgb(153, 204, 255);\" align=\"center\">Audi A4</div>\n        <div id=\"KiaRio\" onclick=\"location.href='KiaRio.html'\" style=\"background-color: rgb(153, 204, 255);\" align=\"center\">Kia Rio </div>\n        <div id=\"Vaz07\" onclick=\"location.href='Vaz07.html'\" style=\"background-color: rgb(153, 204, 255);\" align=\"center\">Lada 2107 </div>\n       \n        <div id=\"Priora\" onclick=\"location.href='Priora.html'\" style=\"background-color: rgb(153, 204, 255);\" align=\"center\">Lada Priora </div>\n       <div id=\"Pathfinder\" onclick=\"location.href='Pathfinder.html'\" style=\"background-color: rgb(153, 204, 255);\" align=\"center\">Nissan Pathfinder </div>\n        <div id=\"Niva\" onclick=\"location.href='Niva.html'\" style=\"background-color: rgb(153, 204, 255);\" align=\"center\">Niva 2121 4x4 </div>\n        <div id=\"Astra\" onclick=\"location.href='Astra.html'\" style=\"background-color: rgb(153, 204, 255);\" align=\"center\">Opel Astra GTC </div>\n       <!--  <div id=\"SkodaOctaviaA7\" onclick=\"location.href='SkodaOctaviaA7.html'\" style=\"background-color: rgb(153, 204, 255);\" align=\"center\">Skoda Octavia A7 </div -->\n         <div id=\"Prado\" onclick=\"location.href='Prado.html'\" style=\"background-color: rgb(153, 204, 255);\" align=\"center\">Toyota Land Cruiser Prado </div>\n        <div id=\"Patriot\" onclick=\"location.href='Patriot.html'\" style=\"background-color: rgb(153, 204, 255);\" align=\"center\">Uaz Patriot </div>\n\n\n\n          </div>\n    </div>\n\n\t<div id=\"colorPanel\"  onclick=\"this.style.left = 'calc(100% - ' + this.offsetWidth + 'px)'; calcPanel.style.top = 'calc(100% - ' + calcPanel.offsetHeight + 'px)'; console.log(calcPanel.offsetHeight);\"> \n\n\t<div id=\"panelButton\"> P I G M E N T S </div>\n\t\n\t<div id=\"MatTypePanel\">\n\n\t<div  id=\"GlossMat\">Glossy</div>\n\t<div  id=\"MateMat\">Mate</div>\n\t<div  id=\"TitanMat\">Titan</div>\n\t\n\n\t</div>\n\n\t\t<div class=\"ColTab\">\n\t\t<div class=\"ColCell\" id=\"marusia\">Marusia</div>\n\t\t<div class=\"ColCell\" id=\"gold\">Gold</div>\n\t\t<div class=\"ColCell\" id=\"RedPerl\">Red perl</div>\n\t\t<div class=\"ColCell\" id=\"BluePerl\">Blue perl</div>\n\t\t<div class=\"ColCell\" id=\"GreyPerl\">Grey perl</div>\n\t\t<div class=\"ColCell\" id=\"Baikal\">Baikal</div>\n\t\t<div class=\"ColCell\" id=\"Desert\">Desert</div>\n\t\t<div class=\"ColCell\" id=\"Jungle\">Jungle</div>\n\t\t<div class=\"ColCell\" id=\"Koka\">Koka</div>\n\t\t<div class=\"ColCell\" id=\"Lemon\">Lemon</div>\n\t\t<div class=\"ColCell\" id=\"Lime\">Lime</div>\n\t\t<div class=\"ColCell\" id=\"Praga\">Praga</div>\n\t\t<div class=\"ColCell\" id=\"Urban\">Urban</div>\n\t\t<div class=\"ColCell\" id=\"Amnizia\">Amnesia</div>\n\t\t<div class=\"ColCell\" id=\"Barca\">Barsa</div>\n\t\t<div class=\"ColCell\" id=\"Katrin\">Katrin</div>\n\t\t<div class=\"ColCell\" id=\"Secret\">Secret</div>\n\t\t<div class=\"ColCell\" id=\"RedFire\">Red Fire</div>\n\t\t<div class=\"ColCell\" id=\"OrangeFire\">Orange Fire</div>\n\t\t<div class=\"ColCell\" id=\"Lili\">Lili</div>\n\t\t<div class=\"ColCell\" id=\"Black\">Black</div>\n\t\t<div class=\"ColCell\" id=\"White\">White</div>\n\t\t<div class=\"ColCell\" id=\"Grey\">Grey</div>\n\t\t</div>\n\t</div>\n\n\n</div>\n<script type=\"text/javascript\" src=\"Car.min.js?v=07072017170229\"></script> \n</body> \n</html>\n",
+			"file": "car.html",
+			"file_size": 5175,
+			"file_write_time": 131528180978959603,
+			"settings":
+			{
+				"buffer_size": 5035,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Astra.html",
+			"settings":
+			{
+				"buffer_size": 5310,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Niva.html",
+			"settings":
+			{
+				"buffer_size": 5309,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "KiaRio.html",
+			"settings":
+			{
+				"buffer_size": 5311,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Pathfinder.html",
+			"settings":
+			{
+				"buffer_size": 5314,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Patriot.html",
+			"settings":
+			{
+				"buffer_size": 5311,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Prado.html",
+			"settings":
+			{
+				"buffer_size": 5309,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Priora.html",
+			"settings":
+			{
+				"buffer_size": 5311,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Vaz07.html",
+			"settings":
+			{
+				"buffer_size": 5310,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "A4.html",
+			"settings":
+			{
+				"buffer_size": 5306,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Niva.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Prado.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Patriot.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Pathfinder.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Astra.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/KiaRio.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/A4.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Vaz07.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Priora.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/deploy/assets/tutorials/sunglasses/sunglasses.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/apps_dev/webplayer/webplayer.js",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Car.min.css",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/q7.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/car.html",
+		"/C/Users/GarikDog/Desktop/Simple-Circle-Progress-Indicator-Plugin-with-jQuery-CSS3-Progress-Circle/README.md",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Q7.js",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Car.min.js",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/progress-circle.js",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/css/circle.css",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/apps_dev/webplayer/webplayer.css",
+		"/C/Users/GarikDog/AppData/Local/Temp/Rar$DRa0.406/css/style.css",
+		"/C/Users/GarikDog/AppData/Local/Temp/Rar$DRa0.542/css-percentage-circle-master/css/circle.css",
+		"/C/Users/GarikDog/AppData/Local/Temp/Rar$DRa0.033/css/style.css",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Q7.html",
+		"/C/SteamLibrarySSD/Blend4Web-17.04.1/projects/Car/Car.html",
+		"/C/SteamLibrarySSD/blend4web_ce/deploy/apps/common/b4w.simple.min.js",
+		"/C/SteamLibrarySSD/blend4web_ce/projects/cars2/b4w.simple.min.js",
+		"/C/SteamLibrarySSD/blend4web_ce/projects/Car/b4w.simple.min.js",
+		"/C/SteamLibrarySSD/blend4web_ce/projects/cars2/cars2.js",
+		"/C/SteamLibrarySSD/blend4web_ce/projects/Car/Car.min.js",
+		"/C/SteamLibrarySSD/blend4web_ce/projects/1/Car.html",
+		"/C/SteamLibrarySSD/blend4web_ce/projects/1/resize.js",
+		"/C/SteamLibrarySSD/blend4web_ce/projects/1/Car.min.js",
+		"/C/SteamLibrarySSD/blend4web_ce/projects/CarVithChange/Car.html",
+		"/C/SteamLibrarySSD/blend4web_ce/projects/CarVithChange/Car.min.js",
+		"/C/Users/GarikDog/Desktop/Car/1/TestPage/Car.html",
+		"/C/Users/GarikDog/Desktop/Car/1/TestPageWithSelect/Car.html",
+		"/C/Users/GarikDog/Desktop/Car/1/TestPageWithSelect/Car.min.js",
+		"/C/Users/GarikDog/Desktop/Car/b4w.simple.min.js",
+		"/C/Users/GarikDog/Desktop/Car/1/TestPage/assets/Car.json",
+		"/C/Users/GarikDog/Desktop/Car/resize.js",
+		"/C/Users/GarikDog/Desktop/Car/1/TestPage/Car.min.js",
+		"/C/Users/GarikDog/Desktop/Car/1/TestPage/b4w.simple.min.js",
+		"/C/Users/GarikDog/Desktop/Car/Car.min.js",
+		"/C/Users/GarikDog/Desktop/Car/Car.html"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"calcp",
+			"07",
+			"js",
+			"Astr",
+			"astr",
+			"js",
+			"A4",
+			"js",
+			"q7",
+			"perce",
+			"ful",
+			"full",
+			"load",
+			"m_ct",
+			"m_ctr",
+			"camer",
+			"Ocar'",
+			"Ocar",
+			"m_mat",
+			"logo",
+			"prelo",
+			"json",
+			"preloa",
+			"90c844",
+			"color",
+			"colo",
+			"vg",
+			"colo",
+			"pre",
+			"prelo",
+			";\n",
+			"z-in",
+			"$( '#circle' ).progressCircle()",
+			"nPercent",
+			"js",
+			"preloader_cb",
+			"percentage",
+			"PRELOA",
+			"load",
+			"pre",
+			"preload",
+			"js",
+			"prelo",
+			"count",
+			"preloa",
+			"full",
+			"car.h",
+			"car.ht",
+			"q7",
+			"jaso",
+			"js",
+			"q7",
+			"gloss",
+			"tab",
+			"gzi",
+			"gz",
+			"json",
+			"gzip",
+			"gz",
+			"gzip",
+			"json",
+			"js",
+			"json",
+			"jso",
+			"car",
+			"json",
+			"vg",
+			"css",
+			"vg",
+			"car",
+			"css",
+			"vg",
+			"\"vg\"",
+			"Car",
+			"Car.min",
+			"vg",
+			"\"vg\"",
+			"vg"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "car.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5035,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1722,
+								1722
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Astra.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5310,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1906,
+								1906
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Niva.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1906,
+								1906
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "KiaRio.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1906,
+								1906
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Pathfinder.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5314,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1996,
+								1996
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Patriot.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1905,
+								1905
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Prado.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1905,
+								1905
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Priora.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1906,
+								1906
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Vaz07.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5310,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1797,
+								1797
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "A4.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								650,
+								650
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "HtmlProject.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

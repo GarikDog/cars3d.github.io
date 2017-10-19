@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>RPcentrum</title> 
+<meta charset="utf-8"> 
+<meta property="og:title" content="RP 3D Car Paint" />
+<meta property="og:image" content="https://i.ytimg.com/vi/OT9brDPxeTU/hqdefault.jpg" />
+<link type="text/css" rel="stylesheet" href="Car.min.css?v=07072017170229"> 
+<script type="text/javascript" src="./b4w.simple.min.js?v=07072017170229"></script>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+
+<script src="progress-circle.js"></script>
+
+</head> 
+<body> 
+
+
+
+<div id="container">
+	<div id="circle"><div id="load"><img src="assets/load.png" alt="Load" height="70" width="70" ></a></div></div>
+
+	
+	
+
+<div id="main_canvas_container" onclick="colorPanel.style.left = '100%'; carSelect.style.left = '-150px'; calcPanel.style.top = '100%'; "></div> 
+
+<div id="vg"><a href="https://vk.com/share.php?url=http://3dstyling.ru" target="_blank"><img src="assets/logoShareVK.png" alt="Logo" height="70" width="70"></a><div id="rotcamid" style="cursor: pointer;"><img src="assets/rotate.png" alt="Logo" height="70" width="70"></a>
+</div></div>
+
+<!-- Начало 
+
+    <div id="vk_button" class="control_panel_button" style="margin-bottom: 0px; display: block; opacity: 1;"><a target="_blank" href="https://vk.com/share.php?url=http://rpbaza.ru/carpaint/Test1/Col2.html"></a></div>
+    
+  
+   Конец -->
+
+<div id="full">fullscreen</div>
+
+<div id="logo"><a href="http://www.rpcentrum.com" target="_blank"> <img src="assets/logo.png" alt="Logo" height="70" width="70" ></a></div>
+
+<div id="ColorID"></div>
+
+<did id="calcPanel">Колер хамелеон "MARUSYA" на 2 литра - 3 шт.<br>
+Прозрачная глянцевая база густая резина 1 литр для колеров - 6 шт.<br> 
+Черная матовая база густая резина 1 литр - 7 шт.<br>
+Разбавитель для жидкой резины, лака, ТИТАНа 1 литр - 25 шт.<br>
+Эластичный полиуретановый лак "Goodлак" Глянцевый - 6 шт.<br>
+<a href="http://rpcentrum.com/sotrudnichestvo/" target="_blank">КУПИТЬ</a> |
+<a href="http://www.rpbaza.ru" target="_blank">ПОКРАСИТЬ</a>
+</did>
+<!-- HERE CODE of car list -->
+    <div id="carSelect" onclick="this.style.left = '0px'">
+      <div id="carButton"> C A R S </div>
+          <div class="carTab">
+        <div id="AUDIA4" onclick="location.href='A4.html'" style="background-color: rgb(153, 204, 255);" align="center">Audi A4</div>
+        <div id="KiaRio" onclick="location.href='KiaRio.html'" style="background-color: rgb(153, 204, 255);" align="center">Kia Rio </div>
+        <div id="Vaz07" onclick="location.href='Vaz07.html'" style="background-color: rgb(153, 204, 255);" align="center">Lada 2107 </div>
+        
+        <div id="Priora" onclick="location.href='Priora.html'" style="background-color: rgb(153, 204, 255);" align="center">Lada Priora </div>
+       <div id="Pathfinder" onclick="location.href='Pathfinder.html'" style="background-color: rgb(153, 204, 255);" align="center">Nissan Pathfinder </div>
+        <div id="Niva" onclick="location.href='Niva.html'" style="background-color: rgb(153, 204, 255);" align="center">Niva 2121 4x4 </div>
+        <div id="Astra" onclick="location.href='Astra.html'" style="background-color: rgb(153, 204, 255);" align="center">Opel Astra GTC </div>
+      <!--   <div id="SkodaOctaviaA7" onclick="location.href='SkodaOctaviaA7.html'" style="background-color: rgb(153, 204, 255);" align="center">Skoda Octavia A7 </div> -->
+         <div id="Prado" onclick="location.href='Prado.html'" style="background-color: rgb(153, 204, 255);" align="center">Toyota Land Cruiser Prado </div>
+        <div id="Patriot" onclick="location.href='Patriot.html'" style="background-color: rgb(153, 204, 255);" align="center">Uaz Patriot </div>
+
+
+
+          </div>
+    </div>
+
+	<div id="colorPanel"  onclick="this.style.left = 'calc(100% - ' + this.offsetWidth + 'px)'; calcPanel.style.top = 'calc(100% - ' + calcPanel.offsetHeight + 'px)'; console.log(calcPanel.offsetHeight);"> 
+
+	<div id="panelButton"> P I G M E N T S </div>
+	
+	<div id="MatTypePanel">
+
+	<div  id="GlossMat">Glossy</div>
+	<div  id="MateMat">Mate</div>
+	<div  id="TitanMat">Titan</div>
+	
+
+	</div>
+
+		<div class="ColTab">
+		<div class="ColCell" id="marusia">Marusia</div>
+		<div class="ColCell" id="gold">Gold</div>
+		<div class="ColCell" id="RedPerl">Red perl</div>
+		<div class="ColCell" id="BluePerl">Blue perl</div>
+		<div class="ColCell" id="GreyPerl">Grey perl</div>
+		<div class="ColCell" id="Baikal">Baikal</div>
+		<div class="ColCell" id="Desert">Desert</div>
+		<div class="ColCell" id="Jungle">Jungle</div>
+		<div class="ColCell" id="Koka">Koka</div>
+		<div class="ColCell" id="Lemon">Lemon</div>
+		<div class="ColCell" id="Lime">Lime</div>
+		<div class="ColCell" id="Praga">Praga</div>
+		<div class="ColCell" id="Urban">Urban</div>
+		<div class="ColCell" id="Amnizia">Amnesia</div>
+		<div class="ColCell" id="Barca">Barsa</div>
+		<div class="ColCell" id="Katrin">Katrin</div>
+		<div class="ColCell" id="Secret">Secret</div>
+		<div class="ColCell" id="RedFire">Red Fire</div>
+		<div class="ColCell" id="OrangeFire">Orange Fire</div>
+		<div class="ColCell" id="Lili">Lili</div>
+		<div class="ColCell" id="Black">Black</div>
+		<div class="ColCell" id="White">White</div>
+		<div class="ColCell" id="Grey">Grey</div>
+		</div>
+	</div>
+
+
+</div>
+<script type="text/javascript" src="Pathfinder.js?v=07072017170229"></script> 
+</body> 
+</html>

@@ -1,0 +1,454 @@
+
+
+body {
+  margin: 0px;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.prog-circle .slice {
+  position : absolute;
+
+  width    : 1em;
+  height   : 1em;
+  clip     : rect(0em, 1em, 1em, 0.5em);
+}
+.prog-circle .slice.clipauto {
+  clip : rect(auto, auto, auto, auto);
+}
+.prog-circle .fill, .prog-circle .bar {
+  position              : absolute;
+  border                : 0.08em solid #f24942;
+  width                 : 0.84em;
+  height                : 0.84em;
+  clip                  : rect(0em, .5em, 1em, 0em);
+  -webkit-border-radius : 50%;
+  -moz-border-radius    : 50%;
+  -ms-border-radius     : 50%;
+  -o-border-radius      : 50%;
+  border-radius         : 50%;
+  -webkit-transform     : rotate(20deg);
+  -moz-transform        : rotate(20deg);
+  -ms-transform         : rotate(20deg);
+  -o-transform          : rotate(20deg);
+  transform             : rotate(20deg);
+  
+}
+.prog-circle {
+  position              : absolute;
+  left                  :50%;
+  right                 : 50%;
+  top                   : 40%;
+  bottom                : 60%;
+  font-size             : 120px;
+  width                 : 1em;
+  height                : 1em;
+  -webkit-border-radius : 50%;
+  -moz-border-radius    : 50%;
+  -ms-border-radius     : 50%;
+  -o-border-radius      : 50%;
+  border-radius         : 50%;
+  float                 : left;
+  margin                : 0 0.1em 0.1em 0;
+  
+  z-index                            : 1000;
+}
+.prog-circle .percenttext {
+  position                           : absolute;
+  width                              : 100%;
+  height                             : 1em;
+  z-index                            : 1001;
+  margin                             : auto;
+  top                                : 0;
+  left                               : 0;
+  right                              : 0;
+  bottom                             : 0;
+  font-size                          : 0.3em;
+  color                              : #90c844;
+  display                            : block;
+  text-align                         : center;
+  white-space                        : nowrap;
+  line-height                        : 100%;
+  -webkit-transition-duration        : 0.2s;
+  -moz-transition-duration           : 0.2s;
+  -o-transition-duration             : 0.2s;
+  transition-duration                : 0.2s;
+  -webkit-transition-timing-function : ease-out;
+  -moz-transition-timing-function    : ease-out;
+  -o-transition-timing-function      : ease-out;
+  transition-timing-function         : ease-out;
+  background-image:     :url(assets/6655.jpg);
+}
+.prog-circle .after {
+  position              : absolute;
+  top                   : 0.08em;
+  left                  : 0.08em;
+  display               : block;
+  content               : " ";
+  -webkit-border-radius : 50%;
+  -moz-border-radius    : 50%;
+  -ms-border-radius     : 50%;
+  -o-border-radius      : 50%;
+  border-radius         : 50%;
+  background-color      : #FFFFFF;
+  width                 : 0.84em;
+  height                : 0.84em;
+  background:  url(assets/logo.png);
+  
+}
+
+
+#container{
+  
+    overflow: hidden;
+    position: absolute;
+  width: 100%;
+  height: 100%;
+    -webkit-transform-origin: 0 0;
+  
+}
+#main_canvas_container{
+   
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+}
+
+a{
+  color: #00cc00;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  z-index: 999;
+}
+
+a:hover{
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+}
+
+#calcPanel{
+position: absolute;
+left:50%;
+width: 500px;
+margin-left: -250px;
+background-color: rgba(67, 124, 201, 0.5);
+color: #FFFFFF;
+padding: 2px;
+font-size: 1em;
+text-align: center;
+top:100%;
+transition: top 0.5s;
+visibility: hidden;
+}
+
+#logo{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  margin-left: 2%;
+  margin-top: 2%;
+  z-index: 0;
+  visibility: hidden;
+}
+#load{
+  position: absolute;
+    left                  :50%;
+  right                 : 50%;
+  top                   : 40%;
+  bottom                : 60%;
+  z-index: 1100;
+}
+#vg{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  left: 2%;
+  bottom: 6%;
+  visibility: hidden;
+}
+
+#full{
+  position: absolute;
+  left: 100%;
+  margin-left: -100px;
+  bottom:0;
+  font-size: 1.2em;
+  color: #ffffff;
+  cursor: pointer;
+
+}
+
+#full:hover{
+  color:#555;
+}
+
+#ColorID{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 2em;
+  margin-top: 1%;
+  color: #FFFFFF;
+}
+
+#carSelect{
+  position: absolute;
+  background-color: rgba(67, 124, 201, 0.5);
+  width: 150px;
+  height: 100%;
+  left: -150px;
+  transition: left 0.5s;
+ cursor: pointer;
+ visibility: hidden;
+}
+
+#carButton{
+  position: absolute;
+  background-color: rgba(67, 124, 201, 0.5);
+  top:  30%;
+  left: 150px;
+  width:1em; 
+  line-height:1em; 
+  font-size:40px;
+  text-align: center;
+  color: #DCDCDC;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.carTab{
+ position:absolute;
+ overflow-y: scroll;
+ overflow-x: hidden;
+  width: 90%;
+ margin-left: 5%;
+ margin-top: 2%;
+ height: 85%;
+
+}
+
+.cars{
+ 
+min-width: 190px;
+margin-top: 5% ;
+text-align: left;
+font-size: 1em;
+color:#DCDCDC;
+-webkit-user-select: none;
+}
+
+#AUDIA4{
+ 
+border:12px solid #99CCFF;
+  background-color: #99CCFF;
+  border-radius: 8px;
+}
+#AUDIQ7{
+ 
+border:12px solid #99CCFF;
+  background-color: #99CCFF;
+  border-radius: 8px;
+  margin-top: 2px;
+}
+
+#colorPanel{
+  
+  position: absolute;
+ 
+  background-color: rgba(67, 124, 201, 0.5);
+  max-width: 300px;
+  min-width: 150px;
+  width: 20%;
+  height: 100%;
+  left: 100%;
+  transition: left 0.5s;
+ cursor: pointer;
+ visibility: hidden;
+}
+
+#panelButton{
+  position: absolute;
+  background-color: rgba(67, 124, 201, 0.5);
+  top: 30%;
+ margin-left: -40px;
+  width:1em; 
+  line-height:1em; 
+  font-size:40px;
+  text-align: center;
+  color: #DCDCDC;
+  -webkit-user-select: none;
+   cursor: pointer;
+}
+
+#MatTypePanel{
+  width: 90%;
+  max-width: 300px;
+  min-width: 130px;
+  height: auto;
+  text-align: center;
+  font-size: 1.3em;
+  color:#DCDCDC;
+  margin-top: 2%;
+  margin-left: 5%;
+ -webkit-user-select: none;
+
+}
+
+#GlossMat {
+  border:1px solid #69839a;
+  background-color: #69839a;
+  border-radius: 6px;
+  
+}
+
+#MateMat {
+  border:1px solid #69839a;
+  background-color: #69839a;
+  border-radius: 6px;
+   margin-top: 2px;
+}
+#TitanMat{
+  border:1px solid #69839a;
+  background-color: #69839a;
+  border-radius: 6px;
+   margin-top: 2px;
+}
+
+
+.ColTab{
+ position:absolute;
+ overflow: scroll; 
+ max-width: 300px;
+ min-width: 130px;
+ width: 90%;
+ margin-left: 5%;
+ margin-top: 2%;
+ height: 85%;
+}
+
+.ColCell{
+background-color: #111;
+min-height:  50px;
+max-height: 100px;
+min-width: 150px;
+height: 20%;
+margin-top: 5% ;
+text-align: center;
+font-size: 2em;
+color:#DCDCDC;
+-webkit-user-select: none;
+}
+
+.ColCell:hover{
+ outline: 2px solid #ffffff;
+}
+
+
+::-webkit-scrollbar { width: 0; }
+
+
+ { -ms-overflow-style: none; }
+
+
+{ overflow: -moz-scrollbars-none; }
+
+#marusia{
+ background: linear-gradient(to bottom, #cc33ff 28%, #66ccff 100%);
+}
+
+#gold{
+   background: linear-gradient(to bottom, #ffcc00 0%, #cc9900 100%);
+}
+
+#RedPerl{
+  background: linear-gradient(to bottom, #633e49 41%, #ffcc99 100%);
+}
+
+#BluePerl{
+  background: linear-gradient(to bottom, #1e1d30 41%, #99ccff 100%);
+}
+
+#GreyPerl {
+    background: linear-gradient(to bottom, #888888 41%, #ffcccc 100%);
+}
+
+#Baikal {
+    background: linear-gradient(to bottom, #3333ff 41%, #66ccff 100%);
+}
+
+#Desert {
+    background: linear-gradient(to bottom, #623022 41%, #ffcc66 100%);
+}
+
+#Jungle {
+    background: linear-gradient(to bottom, #263126 48%, #44472f 100%);
+}
+
+#Koka {
+    background: linear-gradient(to bottom, #33153c 48%, #cc00cc 100%);
+}
+
+#Lemon {
+    background: linear-gradient(to bottom, #ffff66 55%, #ffcc00 100%);
+}
+
+#Lime {
+    background: linear-gradient(to bottom, #339933 47%, #ccff99 100%);
+}
+
+#Praga {
+    background: linear-gradient(to bottom, #663300 47%, #ac997b 100%);
+}
+
+#Urban {
+    background: linear-gradient(to bottom, #3f444e 47%, #737987 100%);
+}
+
+#Amnizia{
+    background: linear-gradient(to bottom, #34222c 60%, #47694a 100%);
+}
+
+#Barca {
+      background: linear-gradient(to bottom, #996633 0%, #7b6095 86%);
+}
+
+ #Katrin {
+    background: linear-gradient(to bottom, #513540 25%, #809faa 99%);
+}
+
+#Secret{
+    background: linear-gradient(to bottom, #55344a 11%, #839469 92%);
+}
+
+#RedFire{
+    background: linear-gradient(to bottom, #cc0066 -1%, #d17553 82%);
+}
+
+
+#OrangeFire {
+     background: linear-gradient(to bottom, #ff5050 -1%, #ff9966 82%);
+}
+
+#Lili {
+    background: linear-gradient(to bottom, #a49a59 -1%, #876a38 82%);
+}
+
+#White{
+ background-color: #ffffff;
+}
+
+#Black{
+background-color: #111;
+}
+
+#Grey{
+  background-color: #555;
+}
+
